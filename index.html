@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MDF Sites Profissionais | Criação de Sites e Soluções Digitais
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="mdflogo.png"
+          alt="MDF Sites Profissionais"
+          class="logo-img-header"
+        />
+      </div>
+
+      <div class="contato-icon" onclick="toggleContatoModal()">
+        <i class="fas fa-comments"></i>
+        <span>Orçamento</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Transforme sua Visão em <br /><span class="destaque"
+            >Realidade Digital</span
+          >
+        </h1>
+        <p class="hero-subtitle">
+          Criação de sites profissionais, modernos e otimizados para impulsionar
+          o seu negócio online.
+        </p>
+        <a href="#portfolio" class="btn-cta"
+          >Veja Nosso Portfólio <i class="fas fa-arrow-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <h2 class="titulo-secao">NOSSO PORTFÓLIO</h2>
+      <p class="subtitulo-secao">
+        Confira alguns dos nossos projetos que podem ser criados para o seu
+        negócio.
+      </p>
+
+      <div class="grid-menu" id="grid-projetos"></div>
+    </section>
+
+    <section id="portfolio" style="padding: 4rem 5%; background: #f4f7f6">
+      <h2
+        style="
+          text-align: center;
+          margin-bottom: 3rem;
+          font-family: sans-serif;
+          color: #333;
+        "
+      >
+        Meus Projetos Recentes
+      </h2>
+
+      <div
+        class="portfolio-grid"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          class="project-card"
+          style="
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+          "
+        >
+          <img
+            src="Captura de tela 2026-02-19 111850.png"
+            alt="Preview Institucional"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="margin-bottom: 0.5rem; font-family: sans-serif">
+              Site Institucional Corporativo
+            </h3>
+            <p
+              style="
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                font-family: sans-serif;
+              "
+            >
+              Focado em credibilidade e apresentação de serviços para empresas
+              B2B.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                margin-bottom: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span
+                style="
+                  background: #e1e8ef;
+                  color: #004e92;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >HTML5</span
+              >
+              <span
+                style="
+                  background: #e1e8ef;
+                  color: #004e92;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >CSS Grid</span
+              >
+            </div>
+            <div style="display: flex; gap: 10px">
+              <a
+                href="https://siteinstitucional-five.vercel.app/"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  background: #004e92;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Ver Online 🚀</a
+              >
+              <a
+                href="https://github.com/MichellFranca/siteinstitucional.git"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  border: 2px solid #004e92;
+                  color: #004e92;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >GitHub 💻</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card"
+          style="
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+          "
+        >
+          <img
+            src="turismo.png"
+            alt="Preview E-commerce"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="margin-bottom: 0.5rem; font-family: sans-serif">
+              Site de vendas
+            </h3>
+            <p
+              style="
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                font-family: sans-serif;
+              "
+            >
+              site pessoal de uma agente de viagens que demonstra todo o seu
+              portifólio produtos e serviços.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                margin-bottom: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span
+                style="
+                  background: #ffeae6;
+                  color: #ff4757;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Flexbox</span
+              >
+              <span
+                style="
+                  background: #ffeae6;
+                  color: #ff4757;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >UI Design</span
+              >
+              <span
+                style="
+                  background: #e6f511;
+                  color: #0b0b01;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Java Script</span
+              >
+            </div>
+            <div style="display: flex; gap: 10px">
+              <a
+                href="https://teste-site-viagenslaizloureiro.vercel.app/"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  background: #ff4757;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Ver Online 🚀</a
+              >
+              <a
+                href="https://michellfranca.github.io/teste-site-viagenslaizloureiro/index.html"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  border: 2px solid #ff4757;
+                  color: #ff4757;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >GitHub 💻</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" style="padding: 4rem 5%; background: #f4f7f6">
+      <h2
+        style="
+          text-align: center;
+          margin-bottom: 3rem;
+          font-family: sans-serif;
+          color: #333;
+        "
+      ></h2>
+
+      <div
+        class="portfolio-grid"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          class="project-card"
+          style="
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+          "
+        >
+          <img
+            src="page.png"
+            alt="Preview Institucional"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="margin-bottom: 0.5rem; font-family: sans-serif">
+              Landing Page Premium
+            </h3>
+            <p
+              style="
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                font-family: sans-serif;
+              "
+            >
+              Focado em credibilidade e apresentação de serviços para empresas
+              B2B.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                margin-bottom: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span
+                style="
+                  background: #e1e8ef;
+                  color: #004e92;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >HTML5</span
+              >
+              <span
+                style="
+                  background: #e1e8ef;
+                  color: #004e92;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >CSS Grid</span
+              >
+              <span
+                style="
+                  background: #e1e8ef;
+                  color: #004e92;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Flexbox</span
+              >
+            </div>
+            <div style="display: flex; gap: 10px">
+              <a
+                href="https://landingpage-phi-eight.vercel.app/"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  background: #004e92;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Ver Online 🚀</a
+              >
+              <a
+                href="https://github.com/MichellFranca/landingpage.git"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  border: 2px solid #004e92;
+                  color: #004e92;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >GitHub 💻</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card"
+          style="
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+          "
+        >
+          <img
+            src="Captura de tela 2026-02-19 111811.png"
+            alt="Preview E-commerce"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="margin-bottom: 0.5rem; font-family: sans-serif">
+              E-commerce Moderno
+            </h3>
+            <p
+              style="
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                font-family: sans-serif;
+              "
+            >
+              Interface de loja virtual vibrante com foco na experiência do
+              usuário e listagem de produtos.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                margin-bottom: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span
+                style="
+                  background: #ffeae6;
+                  color: #ff4757;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Flexbox</span
+              >
+              <span
+                style="
+                  background: #ffeae6;
+                  color: #ff4757;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >UI Design</span
+              >
+            </div>
+            <div style="display: flex; gap: 10px">
+              <a
+                href="https://e-commerce-weld-alpha-90.vercel.app/"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  background: #ff4757;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >Ver Online 🚀</a
+              >
+              <a
+                href="https://github.com/MichellFranca/e-commerce.git"
+                target="_blank"
+                style="
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px;
+                  border: 2px solid #ff4757;
+                  color: #ff4757;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                "
+                >GitHub 💻</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <img
+        src="mdflogo.png"
+        alt="MDF Sites Profissionais"
+        class="logo-footer-big"
+      />
+
+      <h2 class="logo-text-footer">MDF Sites Profissionais</h2>
+      <p class="footer-desc">
+        Desenvolvendo soluções digitais com qualidade, compromisso e foco em
+        resultados.
+      </p>
+
+      <div class="social-links">
+        <a href="https://instagram.com/seu.instagram" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" onclick="abrirZapFooter()"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+      <p style="margin-top: 20px; color: #aaa; font-size: 0.9rem">
+        &copy; 2026 MDF Sites Profissionais. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <div id="modal-contato" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>SOLICITAR ORÇAMENTO</h3>
+          <button onclick="toggleContatoModal()" class="btn-fechar">
+            &times;
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <p>Selecione o tipo de projeto que você deseja:</p>
+          <div class="opcoes-projeto">
+            <button
+              class="btn-opcao"
+              onclick="selecionarProjeto('Site Institucional')"
+            >
+              Site Institucional
+            </button>
+            <button
+              class="btn-opcao"
+              onclick="selecionarProjeto('E-commerce / Loja Virtual')"
+            >
+              E-commerce
+            </button>
+            <button
+              class="btn-opcao"
+              onclick="selecionarProjeto('Landing Page')"
+            >
+              Landing Page
+            </button>
+            <button
+              class="btn-opcao"
+              onclick="selecionarProjeto('Outro Projeto')"
+            >
+              Outro
+            </button>
+          </div>
+          <div id="projeto-selecionado" style="display: none; margin-top: 20px">
+            <p>Projeto selecionado: <strong id="nome-projeto"></strong></p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            onclick="enviarOrcamentoZap()"
+            class="btn-zap"
+            id="btn-enviar-orcamento"
+            disabled
+          >
+            <i class="fab fa-whatsapp"></i> ENVIAR SOLICITAÇÃO
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
