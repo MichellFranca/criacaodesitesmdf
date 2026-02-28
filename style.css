@@ -1,14 +1,14 @@
-/* --- NOVA PALETA DE CORES E VARIÁVEIS --- */
+/* --- style.css --- */
 :root {
   --cor-principal: #0047ab; /* Azul Cobalto */
-  --cor-secundaria: white; /* Azul Escuro/Preto para fundo */
+  --cor-secundaria: #0a192f; /* Azul Escuro/Preto para fundo */
   --cor-destaque: #ff5722; /* Laranja/Vermelho para CTA */
-  --cor-texto-claro: #ffffff;
-  --cor-texto-escuro: #333333;
-  --cor-fundo-secao: #f5f5f5; /* Cinza Claro */
-  --cor-card: #ffffff;
-  --borda-suave: 1px solid rgba(0, 0, 0, 0.1);
-  --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --cor-texto-claro: #ffffff; /* */
+  --cor-texto-escuro: #333333; /* */
+  --cor-fundo-secao: #f4f7f6; /* Cinza Claro */
+  --cor-card: #ffffff; /* */
+  --borda-suave: 1px solid rgba(0, 0, 0, 0.1); /* */
+  --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1); /* */
 }
 
 * {
@@ -18,10 +18,14 @@
 }
 
 body {
+  /* Melhoria: Adicionando uma textura de fundo sutil */
   background-color: var(--cor-fundo-secao);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3%3G%3Cg fill-rule='evenodd'%3%3G%3Cg id='V' fill='%230047ab' fill-opacity='0.05'%3%3G%3Cpath d='M10 10c0 5.523-4.477 10-10 10v10c11.046 0 20-8.954 20-20h-10zm10 30c0 5.523-4.477 10-10 10v10c11.046 0 20-8.954 20-20H20zm10 30c0 5.523-4.477 10-10 10v10c11.046 0 20-8.954 20-20H30zM0 60c0 5.523 4.477 10 10 10V60H0zm20 10h10V60H20v10zM10 70h10V60H10v10zm10-30c0 5.523 4.477 10 10 10V40H20zm20 10h10V40H20v10zM30 50h10V40H30v10zm10-30c0 5.523 4.477 10 10 10V20H40zm20 10h10V20H40v10zM50 30h10V20H50v10zm10-10c0 5.523 4.477 10 10 10V10H60zm20 10h10V10H60v10zM70 20h10V10H70v10z'/%3%3G%3C/g%3%3%3G%3C/svg%3%3G"); /* Textura de padrão geométrico */
+
   color: var(--cor-texto-escuro);
   font-family: "Roboto", sans-serif; /* Fonte para o corpo do texto */
-  padding-top: 80px; /* Ajuste para o header fixo menor */
+  padding-top: 100px; /* Ajuste para o header fixo */
+  line-height: 1.6; /* Melhoria de acessibilidade para legibilidade */
 }
 
 /* Tipografia Moderna para Títulos */
@@ -37,8 +41,8 @@ h3,
 
 /* --- HEADER --- */
 header {
-  background-color: var(--cor-secundaria); /* Fundo escuro para o header */
-  height: 120px; /* Altura reduzida */
+  background-color: #ffffff; /* Fundo alterado para branco */
+  height: 120px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -49,7 +53,7 @@ header {
   padding: 0 5%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
-  border-bottom: 2px solid var(--cor-principal); /* Linha azul sutil */
+  border-bottom: 2px solid var(--cor-principal);
 }
 
 .logo-container {
@@ -59,8 +63,8 @@ header {
 
 /* Logo do Header - Ajustado */
 .logo-img-header {
-  height: 90px; /* Altura ajustada */
-  width: auto; /* Largura automática para manter a proporção */
+  height: 120px;
+  width: auto;
   object-fit: contain;
 }
 
@@ -97,8 +101,8 @@ header {
 
 /* --- HERO (CAPA) --- */
 .hero {
-  height: 70vh; /* Altura aumentada */
-  min-height: 500px;
+  height: 60vh;
+  min-height: 400px;
   background:
     linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)),
     /* Overlay azul escuro */
@@ -144,7 +148,7 @@ header {
   padding: 15px 30px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px; /* Bordas menos arredondadas */
+  border-radius: 5px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -162,7 +166,7 @@ header {
 /* --- PORTFÓLIO (ANTIGO MENU) --- */
 .container {
   padding: 60px 5%;
-  background-color: var(--cor-fundo-secao);
+  background-color: transparent; /* Alterado para transparente para a textura funcionar */
 }
 
 .titulo-secao {
@@ -181,7 +185,10 @@ header {
 
 .grid-menu {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsividade melhorada */
   gap: 30px;
   justify-items: center;
 }
@@ -213,8 +220,10 @@ header {
 .card img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  /* Melhoria: Enquadramento ajustado para mostrar o site todo */
+  object-fit: contain; /* Alterado de cover para contain */
   border-bottom: var(--borda-suave);
+  background: #eee; /* Fundo neutro */
 }
 
 .card-info {
@@ -260,41 +269,36 @@ header {
 
 /* --- FOOTER --- */
 footer {
-  background-color: var(--cor-secundaria);
+  background-color: #ffffff; /* Fundo alterado para branco */
   text-align: center;
   padding: 60px 20px;
-  margin-top: 0; /* Remove margem superior */
+  margin-top: 40px;
   border-top: 4px solid var(--cor-principal);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--cor-texto-claro);
 }
 
 .logo-footer-big {
-  height: auto;
-  width: 280px; /* Largura ajustada */
-  border: none; /* Remove a borda */
-  border-radius: 0; /* Remove o arredondamento */
+  height: 180px;
+  width: auto;
   object-fit: contain;
   margin-bottom: 20px;
-  box-shadow: none; /* Remove a sombra */
 }
 
 .logo-text-footer {
   font-size: 1.5rem;
-  color: var(--cor-texto-claro);
+  color: var(
+    --cor-secundaria
+  ); /* Mudado de texto-claro para cor-secundaria (escuro) */
   margin-bottom: 10px;
 }
 
 .footer-desc {
-  color: #343333;
+  color: #aaa;
   max-width: 400px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 }
 
 .social-links a {
-  color: var(--cor-texto-claro);
+  color: var(--cor-principal); /* Mudado para o seu Azul Cobalto */
   font-size: 2rem;
   margin: 0 15px;
   transition:
@@ -303,7 +307,7 @@ footer {
 }
 
 .social-links a:hover {
-  color: var(--cor-principal);
+  color: var(--cor-destaque); /* Fica laranja/vermelho ao passar o mouse */
   transform: translateY(-5px);
 }
 
@@ -432,4 +436,12 @@ footer {
 .btn-zap:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Adicionando textura nas seções cinzas de portfólio */
+/* Adicionando textura de colmeia nas seções cinzas de portfólio */
+.portfolio-section {
+  background-color: #f4f7f6 !important;
+  /* Textura de colmeia (hexágonos) sutil */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239ca3af' fill-opacity='0.2' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
 }
